@@ -1,4 +1,4 @@
-# calling-electron-bootstrap
+# calling-electron
 
 > A Vue.js project
 
