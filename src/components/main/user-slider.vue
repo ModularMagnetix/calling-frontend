@@ -1,11 +1,19 @@
 <template>
   <div class="user-slider">
     <div class="slider__wrapper">
-      <div class="slider__arrow"></div>
+      <div class="slider__arrow">
+        <p>
+          ←
+        </p>
+      </div>
       <div class="slider__name">
         <p>Vladimir Holodkov</p>
       </div>
-      <div class="slider__arrow"></div>
+      <div class="slider__arrow">
+        <p>
+          →
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +26,7 @@ export default {
 
 <style lang="scss" scoped>
 .slider__wrapper {
+  display: flex;
   width: 80%;
   height: 80px;
   margin: 50px auto;
@@ -27,7 +36,16 @@ export default {
     display: flex;
     width: calc(100% - 80px);
     height: 100%;
-    overflow-x: scroll;
+    p {
+      margin: auto;
+    }
+  }
+
+  .slider__arrow {
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
     p {
       margin: auto;
     }
