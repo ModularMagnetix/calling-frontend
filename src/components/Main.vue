@@ -3,6 +3,7 @@
     <div class="sidebar">
       <user-slider></user-slider>
       <tags-area></tags-area>
+      <status></status>
     </div>
     <sale-script></sale-script>
   </div>
@@ -14,7 +15,8 @@ export default {
   components: {
     'sale-script': () => import('./main/sale-script.vue'),
     'user-slider': () => import('./main/user-slider.vue'),
-    'tags-area': () => import('./main/tags-area.vue')
+    'tags-area': () => import('./main/tags-area.vue'),
+    'status': () => import('./main/status.vue')
   }
 }
 </script>
@@ -23,12 +25,13 @@ export default {
   .Main {
     width: 100%;
     height: 100%;
+    background: linear-gradient(135deg,#ea5c54,#bb6dec);
   }
 
   .sidebar {
     width: 33vw;
     height: 100%;
-    background-color: #605b9c;
+    background-color: rgba(0, 0, 0, 0.5);
     float: left;
   }
 </style>

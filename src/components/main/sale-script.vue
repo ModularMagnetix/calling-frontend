@@ -1,6 +1,5 @@
 <template>
   <div class="sale-script">
-    123
   </div>
 </template>
 
@@ -11,5 +10,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.sale-script {
+  width: 100%;
+  height: 100%;
+}
 </style>

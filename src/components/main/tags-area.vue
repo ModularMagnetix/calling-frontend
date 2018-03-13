@@ -1,18 +1,8 @@
 <template>
   <div class="tags-area">
     <div class="tags__wrapper">
-      <div class="tag__item">
-        <p>Звонок</p>
-        <span>×</span>
-      </div>
-
-      <div class="tag__item">
-        <p>Звонок</p>
-        <span>×</span>
-      </div>
-
-      <div class="tag__item">
-        <p>Звонок</p>
+      <div class="tag__item" v-for="item in items" :key="item.name">
+        <p>{{ item.name }}</p>
         <span>×</span>
       </div>
     </div>
@@ -21,7 +11,15 @@
 
 <script>
 export default {
-  name: 'tags-area'
+  name: 'tags-area',
+  data () {
+    return {
+      items: [
+        { name: 'Foo' },
+        { name: 'Bar' }
+      ]
+    }
+  }
 }
 </script>
 
@@ -35,7 +33,7 @@ export default {
   .tag__item {
     padding: 7px 14px;
     border-radius: 20px;
-    background-color: brown;
+    background-color: #bb6dec;
     color: white;
     margin: 3px;
     display: flex;

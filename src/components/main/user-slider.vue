@@ -30,7 +30,8 @@ export default {
   width: 80%;
   height: 80px;
   margin: 50px auto 0 auto;
-  background-color: darkgrey;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #d6d6d6;
 
   .slider__name {
     display: flex;
