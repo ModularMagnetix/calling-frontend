@@ -29,7 +29,7 @@ export default {
   display: flex;
   width: 80%;
   height: 80px;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   background-color: darkgrey;
 
   .slider__name {

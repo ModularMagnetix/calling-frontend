@@ -1,7 +1,8 @@
 <template>
   <div class="Main">
     <div class="sidebar">
-        <user-slider></user-slider>
+      <user-slider></user-slider>
+      <tags-area></tags-area>
     </div>
     <sale-script></sale-script>
   </div>
@@ -12,7 +13,8 @@ export default {
   name: 'main',
   components: {
     'sale-script': () => import('./main/sale-script.vue'),
-    'user-slider': () => import('./main/user-slider.vue')
+    'user-slider': () => import('./main/user-slider.vue'),
+    'tags-area': () => import('./main/tags-area.vue')
   }
 }
 </script>
