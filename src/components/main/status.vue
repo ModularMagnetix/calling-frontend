@@ -1,6 +1,6 @@
 <template>
   <div class="status">
-    <transition-group name="list-complete" tag="div" mode="in-out">
+    <transition-group name="list-complete" tag="div">
       <div class="status__item" v-for="item in items" :key="item.name" v-if="currentStatus === item.name || isOpen"  v-on:click="changeStatus(item.name)">
         <p>{{ item.name }}</p>
       </div>
@@ -65,7 +65,6 @@ export default {
 .list-complete-enter, .list-complete-leave-to
   /* .list-complete-leave-active до версии 2.1.8 */ {
   opacity: 0;
-  transform: translateY(30px);
 }
 .list-complete-leave-active {
   position: absolute;
