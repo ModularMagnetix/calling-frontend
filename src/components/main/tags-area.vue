@@ -3,7 +3,7 @@
     <div class="tags__wrapper">
       <div class="tag__item" v-for="item in items" :key="item.name">
         <p>{{ item.name }}</p>
-        <span>×</span>
+        <span v-on:click="deleteItem(item.name)">×</span>
       </div>
     </div>
   </div>
@@ -18,6 +18,16 @@ export default {
         { name: 'Foo' },
         { name: 'Bar' }
       ]
+    }
+  },
+  methods: {
+    deleteItem: function (name) {
+      let _this = this
+      this.items.forEach(function (item, i, arr) {
+        if (item.name === name) {
+          _this.items.splice(i, 1)
+        }
+      })
     }
   }
 }
