@@ -1,20 +1,23 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import * as actions from './actions'
+import * as getters from './getters'
+import auth from './modules/auth'
+import cordova from './modules/cordova'
+import tab from './modules/tab'
+import speakers from './modules/speakers'
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    results: []
+  actions,
+  getters,
+  modules: {
+    auth,
+    cordova,
+    tab,
+    speakers
   },
-  getters: {
-  },
-  mutations: {
-    set (state, { type, items }) {
-      state[type] = items
-    }
-  },
-  actions: {
-    // https://medium.com/devschacht/%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D0%BC-axios-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5-%D1%81-vue-js-3bc45464c460
-  }
+  plugins: [createPersistedState()]
 })
